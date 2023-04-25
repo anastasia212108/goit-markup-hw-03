@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 :root {
   /*Fonts*/
   --primary-font: Roboto, sans-serif;
@@ -28,6 +38,7 @@ body {
   line-height: 1.5;
   color: var(--color-slate);
   background-color: var(--color-white);
+  width: 1440px;
 }
 .list {
   list-style: none;
@@ -39,12 +50,34 @@ body {
   line-height: 1.2;
   color: var(--color-navy-blue);
   letter-spacing: 0.02em;
+  width: 264px;
+  margin-bottom: 8px;
 }
+
 .subtitle {
   color: var(--color-slate);
+  width: 264px;
 }
 .link {
   text-decoration: none;
+}
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+img {
+  display: block;
+}
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+section {
+  padding: 120px 0;
 }
 /*==============================
 Header styles
@@ -52,8 +85,14 @@ Header styles
 
 .header {
 }
-.header-nav {
+.header-container {
+  display: flex;
+  align-items: center;
 }
+.header-nav {
+  display: flex;
+}
+
 .header-logo {
   font-family: var(--secondary-font);
   font-weight: 800;
@@ -64,6 +103,10 @@ Header styles
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-iris);
+  margin-right: 76px;
+}
+
+.header-logo .link {
 }
 
 .studio {
@@ -79,6 +122,10 @@ Header styles
 }
 
 .header-nav-list {
+  display: flex;
+  margin: 0;
+  gap: 40px;
+  padding: 0;
 }
 .header-nav-item {
 }
@@ -87,19 +134,23 @@ Header styles
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-navy-blue);
+  margin: 24px 0;
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
   color: var(--color-ocean);
-  text-decoration: underline;
 }
 .header-adress {
+  display: flex;
   font-style: normal;
+  margin-left: auto;
 }
 .header-adress-list {
+  display: flex;
+  margin-right: auto;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .header-adress-item {
   font-size: 16px;
@@ -117,20 +168,29 @@ Header styles
   line-height: 1.5;
   color: var(--color-ocean);
 }
+.mail {
+  margin-right: 40px;
+}
 /*==============================
 Hero styles
 ==============================*/
 .hero {
   background-color: var(--color-navy-blue);
+  width: 1440px;
+  text-align: center;
 }
 .hero-title {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   color: var(--color-white);
   background-color: var(--color-navy-blue);
   letter-spacing: 0.02em;
+  width: 496px;
+  margin: auto;
+}
+.hero-title:not(:last-child) {
+  margin-bottom: 48px;
 }
 .hero-btn {
   font-family: var(--primary-font);
@@ -142,6 +202,10 @@ Hero styles
   letter-spacing: 0.04em;
   color: var(--color-white);
   background: var(--color-iris);
+  min-width: 169px;
+  min-height: 56px;
+  padding: 15px 31px;
+  border-radius: 4px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -153,10 +217,17 @@ Feature styles
 .feature {
 }
 .feature-list {
+  display: flex;
+  gap: 24px;
+}
+.feature-list .list {
+  width: 1128px;
 }
 .feature-item {
+  min-width: 264px;
 }
-.feature-Item {
+.strategy {
+  padding-bottom: 8px;
 }
 
 /*==============================
@@ -172,7 +243,12 @@ We doing styles
   text-transform: capitalize;
   color: var(--color-navy-blue);
 }
+.doing-title:not(:last-child) {
+  margin-bottom: 72px;
+}
 .doing-list {
+  display: flex;
+  gap: 24px;
 }
 .doing-item {
 }
@@ -193,11 +269,19 @@ Our team styles
   color: var(--color-navy-blue);
   letter-spacing: 0.02em;
 }
+.team-title:not(:last-child) {
+  margin-bottom: 72px;
+}
 .team-list {
+  display: flex;
+  gap: 24px;
 }
 .team-item {
   text-align: center;
   background-color: var(--color-white);
+}
+.team-desc {
+  padding: 32px 16px;
 }
 .team-img {
 }
@@ -205,8 +289,19 @@ Our team styles
 Icons
 ==============================*/
 .icon {
+  padding: 0 0 120px 0;
 }
+
 .icon-list {
+  display: flex;
+  margin-right: 427px;
+  margin-left: 427px;
+  padding: 0;
+  margin: 0;
+  gap: 24px;
+  justify-content: center;
+  padding-top: 96px;
+  padding-bottom: 72px;
 }
 .icon-item {
 }
@@ -229,6 +324,9 @@ Icons
   letter-spacing: 0.04em;
   color: var(--color-iris);
   background: var(--color-cloud);
+  border-radius: 4px;
+  border: 1px solid var(--color-cornflower);
+  padding: 12px 24px;
 }
 
 /*==============================
@@ -241,6 +339,9 @@ Icons
   letter-spacing: 0.02em;
   color: var(--color-navy-blue);
 }
+.card-title:not(:last-child) {
+  margin-bottom: 8px;
+}
 .card-subtitle {
   font-size: 16px;
   line-height: 1.5;
@@ -248,10 +349,20 @@ Icons
   color: var(--color-slate);
 }
 .card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  padding: 0;
+  margin: 0;
 }
 .card-item {
 }
 .card-img {
+}
+.card-text {
+  min-height: 120px;
+  padding-top: 32px;
+  padding-left: 16px;
 }
 /*==============================
 Footer styles
@@ -279,4 +390,5 @@ Footer styles
   letter-spacing: 0.02em;
   color: var(--color-cloud);
   background-color: var(--color-navy-blue);
+  width: 264px;
 }
