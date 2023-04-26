@@ -84,6 +84,7 @@ Header styles
 ==============================*/
 
 .header {
+  border-bottom: 1px solid var(--color-cornflower);
 }
 .header-container {
   display: flex;
@@ -91,6 +92,7 @@ Header styles
 }
 .header-nav {
   display: flex;
+  align-items: center;
 }
 
 .header-logo {
@@ -125,7 +127,7 @@ Header styles
   display: flex;
   margin: 0;
   gap: 40px;
-  padding: 0;
+  padding: 24px 0;
 }
 .header-nav-item {
 }
@@ -161,7 +163,9 @@ Header styles
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-slate);
+  margin-right: 0px;
 }
+
 .header-adress-link:hover,
 .header-adress-link:focus {
   font-size: 16px;
@@ -171,6 +175,9 @@ Header styles
 .mail {
   margin-right: 40px;
 }
+.tel {
+  margin-right: 0;
+}
 /*==============================
 Hero styles
 ==============================*/
@@ -178,6 +185,8 @@ Hero styles
   background-color: var(--color-navy-blue);
   width: 1440px;
   text-align: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 .hero-title {
   font-weight: 700;
@@ -186,13 +195,14 @@ Hero styles
   color: var(--color-white);
   background-color: var(--color-navy-blue);
   letter-spacing: 0.02em;
-  width: 496px;
+  max-width: 496px;
   margin: auto;
 }
 .hero-title:not(:last-child) {
   margin-bottom: 48px;
 }
 .hero-btn {
+  display: block;
   font-family: var(--primary-font);
   cursor: pointer;
   font-weight: 500;
@@ -203,9 +213,12 @@ Hero styles
   color: var(--color-white);
   background: var(--color-iris);
   min-width: 169px;
-  min-height: 56px;
+  height: 56px;
   padding: 15px 31px;
+  border: none;
   border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -279,6 +292,8 @@ Our team styles
 .team-item {
   text-align: center;
   background-color: var(--color-white);
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-desc {
   padding: 32px 16px;
@@ -289,7 +304,7 @@ Our team styles
 Icons
 ==============================*/
 .icon {
-  padding: 0 0 120px 0;
+  padding: 96px 0 120px;
 }
 
 .icon-list {
@@ -300,18 +315,19 @@ Icons
   margin: 0;
   gap: 24px;
   justify-content: center;
-  padding-top: 96px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .icon-item {
 }
 .icon-button:hover {
   color: var(--color-white);
   background-color: var(--color-ocean);
+  border: 1px solid transparent;
 }
 .icon-button:focus {
   color: var(--color-white);
   background-color: var(--color-ocean);
+  border: 1px solid transparent;
 }
 .icon-button {
   font-family: var(--primary-font);
@@ -361,16 +377,19 @@ Icons
 }
 .card-text {
   min-height: 120px;
-  padding-top: 32px;
-  padding-left: 16px;
+  padding: 32px 16px;
+  border: 1px solid var(--color-cornflower);
 }
 /*==============================
 Footer styles
 ==============================*/
 .footer {
   background-color: var(--color-navy-blue);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer-link {
+  display: inline-block;
   font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 18px;
@@ -380,6 +399,7 @@ Footer styles
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-iris);
+  margin-bottom: 16px;
 }
 .studio-light {
   color: var(--color-cloud);
