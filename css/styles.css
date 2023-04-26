@@ -132,7 +132,6 @@ Header styles
   display: flex;
   margin: 0;
   gap: 40px;
-  padding: 24px 0;
 }
 .header-nav-item {
 }
@@ -143,6 +142,7 @@ Header styles
   color: var(--color-navy-blue);
   margin: 24px 0;
 }
+
 .header-nav-link:hover,
 .header-nav-link:focus {
   color: var(--color-ocean);
@@ -151,7 +151,9 @@ Header styles
   display: flex;
   font-style: normal;
   margin-left: auto;
+  padding: 24px 0;
 }
+
 .header-adress-list {
   display: flex;
   margin-right: auto;
