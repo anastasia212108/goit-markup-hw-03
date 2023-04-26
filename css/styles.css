@@ -89,11 +89,15 @@ Header styles
 .header-container {
   display: flex;
   align-items: center;
-  padding: 24px 0;
+  margin: 0;
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .header-nav {
   display: flex;
   align-items: center;
+  padding: 24px 0;
 }
 
 .header-logo {
@@ -128,6 +132,7 @@ Header styles
   display: flex;
   margin: 0;
   gap: 40px;
+  padding: 24px 0;
 }
 .header-nav-item {
 }
@@ -233,10 +238,11 @@ Feature styles
 .feature-list {
   display: flex;
   gap: 24px;
-}
-.feature-list .list {
   width: 1128px;
+  margin: 0;
+  padding: 0;
 }
+
 .feature-item {
   min-width: 264px;
 }
