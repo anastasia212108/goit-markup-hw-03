@@ -141,6 +141,7 @@ Header styles
   line-height: 1.5;
   color: var(--color-navy-blue);
   margin: 24px 0;
+  padding: 24px 0;
 }
 
 .header-nav-link:hover,
